@@ -1,0 +1,26 @@
+import arcpy
+
+arcpy.env.workspace = 'C:\\Quiz4\\airports.shp'
+print(arcpy.env.workspace)
+
+for field in fields:
+    print("{0} is a type of {1} with a length of {2}"
+          .format(field.name, field.type, field.length))
+    
+    for field in fields:
+        #print('Perfrom buffer analysis for polyline features', field)
+        inputFCName = field.name[0:-4].lower()
+        bufferFCName = inputFCName + "_buffer.shp"
+        buffer = 0
+        if field == 'FEATURE':
+            if value in feature == 'seaplane':
+                buffer = 7500
+            elif value in feature == 'airport':
+                buffer = 15000
+            else:
+                buffer = 0
+            arcpy.Buffer_analysis(field, bufferFCName, str(buffer)+' Meters') 
+            
+            
+            Feature = arcpy.management.CreateFeaturesClass('C:\\Quiz4\\', "buffer_airports.shp")
+            print(Feature)?
