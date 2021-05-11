@@ -12,3 +12,4 @@ This respoitory serves as a database for all the assignments, quizzes, and proje
 
 # Contact Information
 email: natalie-schoen@uiowa.edu
+resume: availabile under "UpdateResume.pdf" in the repository
